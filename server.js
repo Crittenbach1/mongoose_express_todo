@@ -4,8 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 
-//mongoose.Promise = global.Promise;
-//mongoose.connect(dbConn, { promiseLibrary: global.Promise });
+mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost/mongoose_express_todos', { useNewUrlParser: true })
   .then(function(){
