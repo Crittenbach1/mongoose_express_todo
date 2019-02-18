@@ -13,7 +13,7 @@ app.set('view engine', 'mustache');
 app.set('views', __dirname + '/views');
 
 app.get('/', function(req, res) {
-  res.send('Hello');
+  res.render('index', {});
 });
 
 app.listen(3000, function() {
