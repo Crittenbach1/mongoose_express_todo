@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/todos', function(req, res){
-  res.json(req.body);
-})
+  let newTodo = new Todo({ description: req.body.description });
+});
 
 module.exports = router;
