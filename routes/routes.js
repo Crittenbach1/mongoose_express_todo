@@ -15,6 +15,9 @@ router.post('/todos', function(req, res){
     .then(function(result){
       console.log(result);
       res.redirect('/');
+    }).catch(function(err){
+      console.log(err);
+      res.redirect('/');
     });
 });
 
